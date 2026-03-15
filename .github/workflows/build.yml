@@ -1,0 +1,16 @@
+name: build
+
+on:
+  push:
+  pull_request: # 建议在 PR 时也跑一下
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 直接写死，不再需要 matrix 策略
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        run: make
