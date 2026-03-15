@@ -127,7 +127,7 @@ private:
             }
 
             struct epoll_event ev;
-            ev.events = EPOLLIN | EPOLLET | EPOLLONESHOT; // 👈 关键：必须带上 ONESHOT
+            ev.events = EPOLLIN | EPOLLET | EPOLLONESHOT; // 关键：必须带上 ONESHOT
             ev.data.ptr = static_cast<void *>(ctx);
 
             // 使用 EPOLL_CTL_MOD 重新启用监听
@@ -202,7 +202,7 @@ private:
                     ConnectionContext *ctx = new ConnectionContext(conn_fd);
                     // ref_count = 1
     
-                    ev.events = EPOLLIN | EPOLLET | EPOLLONESHOT; // 👈 关键：新连接必须注册为 ONESHOT + ET
+                    ev.events = EPOLLIN | EPOLLET | EPOLLONESHOT; // 关键：新连接必须注册为 ONESHOT + ET
                     ev.data.ptr = static_cast<void *>(ctx);
     
                     if (epoll_ctl(m_epoll_fd, EPOLL_CTL_ADD, conn_fd, &ev) == -1)

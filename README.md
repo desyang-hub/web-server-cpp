@@ -5,7 +5,8 @@
 
 
 
-# 无内存池结果
+### 无内存池结果
+```
 Running 10s test @ http://localhost:8081/
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -19,9 +20,10 @@ Running 10s test @ http://localhost:8081/
   419398 requests in 10.00s, 146.39MB read
 Requests/sec:  41937.49
 Transfer/sec:     14.64MB
+```
 
-
-# 添加内存池结果
+### 添加内存池结果
+```
 Running 10s test @ http://localhost:8081/
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -35,3 +37,4 @@ Running 10s test @ http://localhost:8081/
   541747 requests in 10.00s, 189.09MB read
 Requests/sec:  54169.45
 Transfer/sec:     18.91MB
+```
