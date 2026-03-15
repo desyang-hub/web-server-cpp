@@ -1,4 +1,4 @@
 all:
-	g++ -lpthread main.cpp -o server
-test:
-	g++ -lpthread main.cc -o server
+	g++ -lpthread -Iinclude src/main.cpp src/connect_context.cpp src/http_request.cpp  -o server
+
+# src/connect_context.cpp

@@ -1,0 +1,1 @@
+wrk -t4 -c100 -d10s --latency http://localhost:8081/

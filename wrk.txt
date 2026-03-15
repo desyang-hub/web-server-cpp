@@ -1,0 +1,15 @@
+benchmark commend: wrk -t4 -c100 -d10s --latency http://localhost:8080/
+
+Running 10s test @ http://localhost:8080/
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.90ms    2.36ms  64.56ms   99.10%
+    Req/Sec    12.22k     3.10k   19.04k    71.57%
+  Latency Distribution
+     50%    2.07ms
+     75%    2.39ms
+     90%    2.63ms
+     99%    3.81ms
+  487530 requests in 10.10s, 170.17MB read
+Requests/sec:  48268.48
+Transfer/sec:     16.85MB
