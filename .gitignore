@@ -1,4 +1,6 @@
-/wrk
+wrk/
 
 
 .vscode/
+
+build/

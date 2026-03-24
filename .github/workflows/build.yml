@@ -13,4 +13,4 @@ jobs:
           fetch-depth: 0
 
       - name: Build
-        run: make
+        run: make build
